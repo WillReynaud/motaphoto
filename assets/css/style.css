@@ -1,0 +1,266 @@
+/*======================== Fonts ======================*/
+
+@font-face {
+    font-family: 'Space Mono';
+    src: url('../fonts/SpaceMono-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Space Mono';
+    src: url('../fonts/SpaceMono-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Space Mono';
+    src: url('../fonts/SpaceMono-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1{
+    font-family: 'Space Mono';
+    font-weight: 700;
+    font-style: italic;
+    font-size: 96px;
+    line-height: 142.18px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+}
+
+h2{
+    font-family: 'Space Mono';
+    font-weight: 400;
+    font-style: italic;
+    font-size: 66px;
+    line-height: 58px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    
+}
+
+h3{
+    font-family: 'Space Mono';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26.66px;
+    letter-spacing: 10%;
+    text-transform: uppercase; 
+}
+
+.description{
+    font-family: 'Space Mono';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20.73px;
+    letter-spacing: 10%;
+    text-transform: uppercase;   
+}
+
+p{
+    font-family: 'Poppins';
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0%;    
+}
+
+.menu, .footer-menu-wp{
+    font-family: 'Space Mono';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23.7px;
+    letter-spacing: 0%; 
+    text-transform: uppercase;
+}
+
+.menu-overlay li a{
+    font-family: 'Space Mono';
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 65.16px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+}
+
+
+/*======================== Général ======================*/
+
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 320;
+    color: black;
+    height: 100vh;
+}
+
+/*======================== Header ======================*/
+
+.site-header{
+    display: block;
+}
+
+.hero-image{
+    width: 100%;
+    object-fit: contain;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 0 7%;
+    min-height: 80px;
+    z-index: 100;
+    background-color: white;
+}
+
+.menu-wp {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+
+.menu-wp li a{
+    color: black;
+    text-decoration: none;
+}
+
+.logo{
+    width: 216px;
+    object-fit: contain;
+}
+
+.burger-btn{
+    position: relative;
+    display: none;
+    cursor: pointer;
+}
+
+.burger-icon{
+    height: 2px;
+    width: 100%;
+    background-color: black;
+}
+
+.burger-icon::before {
+    position: absolute;
+    content: "";
+    top: 7px;
+    height: 2px;
+    width: 100%;
+    background-color: black;
+}
+
+.burger-icon::after {
+    position: absolute;
+    content: "";
+    bottom: 7px;
+    height: 2px;
+    width: 100%;
+    background-color: black;
+}
+
+.menu-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    background-color: red;
+
+    /* État initial pour animation d'apparition */
+    opacity: 0;
+    transform: translateY(-50vh);
+    visibility: hidden;
+    transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+}
+
+.menu-wp-overlay {
+    text-align: center;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.menu-wp-overlay li {
+    opacity: 0;
+    transform: translateY(10px) scale(0.95);
+    transition: opacity 0.3s ease-out 0.2s, transform 0.3s ease-out 0.2s;
+}
+
+.menu-wp-overlay li a{
+    color: white;
+    text-decoration: none;
+}
+
+.menu-overlay.active {
+    /*Etat final pour animation d'apparition*/
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.menu-overlay.active .menu-wp-overlay li {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/*======================== Footer ======================*/
+
+.footer-menu{
+    border-top: 2px solid black;
+}
+
+.footer-menu-wp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    min-height: 20px;
+    list-style-type: none;
+}
+
+.footer-menu-wp li a{
+    text-decoration: none;
+    color: black;
+}
+
+/*======================== Responsive ======================*/
+
+@media (max-width: 768px){
+
+
+    .menu{
+        display: none;
+    }
+
+    .burger-btn{
+        display: flex;
+        align-items: center;
+        opacity: 100%;
+        width: 35px;
+        height: 30px;
+    }
+    h1{
+        font-size: 27.59px;
+        line-height: 40.86px;      
+    }
+    
+    h2{
+        font-size: 46px;
+        line-height: 48px;     
+    }
+
+    .footer-menu-wp{
+        flex-direction: column;
+        padding-left: 0;
+        gap: 20px;
+    }
+
+}
