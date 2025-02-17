@@ -211,6 +211,21 @@ body {
     transform: translateY(0) scale(1);
 }
 
+/* Animation burger-btn en croix */
+.burger-btn.active .burger-icon {
+    background-color: transparent;
+}
+
+.burger-btn.active .burger-icon::before {
+    transform: translateY(7px) rotate(45deg);
+    transition: transform 0.3s;
+}
+
+.burger-btn.active .burger-icon::after {
+    transform: translateY(-7px) rotate(-45deg);
+    transition: transform 0.3s;
+}
+
 /*======================== Footer ======================*/
 
 .footer-menu{
