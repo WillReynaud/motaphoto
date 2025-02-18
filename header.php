@@ -13,18 +13,20 @@
     <div class="nav-bar">
         <img class="logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="Logo de Nathalie Mota">
         <nav class="menu">
-        <?php
+            <?php
             wp_nav_menu(array(
                 'theme_location' => 'menu-principal',
                 'container'      => 'ul',
                 'menu_class'     => 'menu-wp',
             ));
             ?>
+            <button class="myBtn">Contact</button>
         </nav>
         <div class="burger-btn">
             <div class="burger-icon"></div>
         </div>
     </div>
+
     <nav class="menu-overlay">
         <?php
             wp_nav_menu(array(
@@ -33,7 +35,9 @@
                 'menu_class'     => 'menu-wp-overlay',
             ));
             ?>
+            <button class="myBtn">Contact</button>
         </nav>
+        
     <section class="hero">
         <img class="hero-image" src="<?php echo get_template_directory_uri(); ?>/assets/img/hero.png" alt="Photographie événementielle par Nathalie Mota">
     </section>
