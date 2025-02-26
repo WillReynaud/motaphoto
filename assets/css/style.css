@@ -99,11 +99,14 @@ p{
 /*======================== Général ======================*/
 
 body {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     min-width: 320;
     color: black;
-    height: 100vh;
+}
+
+section{
+    margin: 0 100px;
 }
 
 /*======================== Header ======================*/
@@ -112,9 +115,14 @@ body {
     display: block;
 }
 
+.hero{
+    margin: 0;
+    padding: 0;
+}
+
 .hero-image{
-    width: 100%;
-    object-fit: contain;
+    width: 100vw;
+    object-fit: fill;
 }
 
 .nav-bar{
@@ -126,6 +134,7 @@ body {
     min-height: 80px;
     z-index: 1;
     background-color: white;
+    box-shadow: 0px 4px 14px 10px #00000008;
 }
 
 .menu{
@@ -317,6 +326,113 @@ input[type="submit" i]{
     transition: transform 0.3s;
 }
 
+/*======================== Template Photo ======================*/
+
+.main-photo-container{
+    display: flex;
+    gap: 20px;
+    border-bottom: #000000 solid 2px;
+}
+
+.photo-info-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 50%;
+}
+
+.photo-title{
+    max-width: 300px;
+    line-height: 80px;
+    margin-bottom: 10px;
+}
+
+.description {
+    line-height: 60px;
+    text-decoration: none;
+}
+
+.description a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.photo-info-btn-container{
+    border-top: #000000 solid 2px;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+.myBtn2{
+    width: 272px;
+    height: 50px;
+    background-color: #D8D8D8;
+    border-radius: 2px;
+    cursor: pointer;
+
+}
+
+.photo-container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-container img{
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.photo-preview-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding-top: 20px;
+}
+
+.photo-preview{
+    height: 80px;
+    width: 70px;
+}
+
+.arrow-btns{
+    text-align: center;
+    width: 70px;
+}
+
+.arrow-btn{
+    text-decoration: none;
+}
+
+.other-pics-container{
+    padding: 40px 0;
+}
+
+.other-pics, .home-pics {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-item {
+    width: 50%;/* Ajustez la largeur selon vos besoins */
+    padding: 10px;
+    object-fit: contain;
+    box-sizing: border-box;
+    height: 500px;
+    overflow: hidden;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
 /*======================== Footer ======================*/
 
 .footer-menu{
