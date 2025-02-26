@@ -38,7 +38,4 @@
             <button class="myBtn">Contact</button>
         </nav>
         
-    <section class="hero">
-        <img class="hero-image" src="<?php echo get_template_directory_uri(); ?>/assets/img/hero.png" alt="Photographie événementielle par Nathalie Mota">
-    </section>
 </header>

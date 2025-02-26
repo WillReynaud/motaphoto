@@ -9,10 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
 var modal = document.getElementById('myModal');
 
 // Get the button that opens the modal
-var buttons = document.querySelectorAll(".myBtn");
+var buttons = document.querySelectorAll(".myBtn, .myBtn2");
 
 buttons.forEach(function (btn) {
     btn.addEventListener("click", function () {
+
+        // Afficher la modal
         modal.style.display = "block";
     });
 });
